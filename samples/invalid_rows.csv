@@ -1,0 +1,6 @@
+"Name","Email","Phone","Status"
+"Valid Lead","valid@example.com","555-123-4567","New"
+"No Email No Phone","","","Follow Up"
+"Bad Email","invalid-email.com","555-000-0000","New"
+"Empty Row",,,,
+"Valid Lead 2","valid2@example.com","555-987-6543","Closed"

@@ -1,0 +1,323 @@
+import { PromptExample } from "@/models/PromptExample";
+
+export const PROMPT_EXAMPLES: PromptExample[] = [
+  {
+    title: "Facebook Lead Ads Export",
+    learningObjective: "Map Facebook lead exports into CRM records while separating phone country code, mapping campaign names to data_source, and calculating confidence.",
+    input: {
+      "Full Name": "John Doe",
+      Email: "john@gmail.com",
+      Phone: "+91 9876543210",
+      Campaign: "Meridian Tower",
+      Remarks: "Interested in 2BHK apartment",
+    },
+    output: {
+      records: [
+        {
+          rowNumber: 2,
+          created_at: null,
+          name: "John Doe",
+          email: "john@gmail.com",
+          country_code: "+91",
+          mobile_without_country_code: "9876543210",
+          company: null,
+          city: null,
+          state: null,
+          country: null,
+          lead_owner: null,
+          crm_status: "GOOD_LEAD_FOLLOW_UP",
+          crm_note: "Interested in 2BHK apartment",
+          data_source: "meridian_tower",
+          possession_time: null,
+          description: null,
+          confidence: 0.99
+        },
+      ],
+      skipped: [],
+    },
+  },
+  {
+    title: "Google Ads Export",
+    learningObjective: "Infer CRM status from natural language follow-up remarks, split phone numbers, and map fields with high confidence.",
+    input: {
+      Customer: "Alice Johnson",
+      Contact: "9988776655",
+      Email: "alice@gmail.com",
+      Status: "Follow up tomorrow morning",
+    },
+    output: {
+      records: [
+        {
+          rowNumber: 2,
+          created_at: null,
+          name: "Alice Johnson",
+          email: "alice@gmail.com",
+          country_code: null,
+          mobile_without_country_code: "9988776655",
+          company: null,
+          city: null,
+          state: null,
+          country: null,
+          lead_owner: null,
+          crm_status: "GOOD_LEAD_FOLLOW_UP",
+          crm_note: null,
+          data_source: null,
+          possession_time: null,
+          description: null,
+          confidence: 0.85
+        },
+      ],
+      skipped: [],
+    },
+  },
+  {
+    title: "Messy Excel Sheet",
+    learningObjective: "Understand non-standard column names, determine CRM Status, and calculate semantic inference confidence.",
+    input: {
+      Client: "Bob Martin",
+      "Reach Me": "9876543210",
+      Comments: "Busy today, call after 6 PM",
+    },
+    output: {
+      records: [
+        {
+          rowNumber: 2,
+          created_at: null,
+          name: "Bob Martin",
+          email: null,
+          country_code: null,
+          mobile_without_country_code: "9876543210",
+          company: null,
+          city: null,
+          state: null,
+          country: null,
+          lead_owner: null,
+          crm_status: "DID_NOT_CONNECT",
+          crm_note: "Busy today, call after 6 PM",
+          data_source: null,
+          possession_time: null,
+          description: null,
+          confidence: 0.85
+        },
+      ],
+      skipped: [],
+    },
+  },
+  {
+    title: "Real Estate CRM Export",
+    learningObjective: "Recognize project names as valid data sources, preserve possession details, and set null CRM Status on ambiguous comments.",
+    input: {
+      Buyer: "Rahul Sharma",
+      Mobile: "+91 9988776655",
+      Project: "Sarjapur Plots",
+      Possession: "December 2026",
+    },
+    output: {
+      records: [
+        {
+          rowNumber: 2,
+          created_at: null,
+          name: "Rahul Sharma",
+          email: null,
+          country_code: "+91",
+          mobile_without_country_code: "9988776655",
+          company: null,
+          city: null,
+          state: null,
+          country: null,
+          lead_owner: null,
+          crm_status: null,
+          crm_note: null,
+          data_source: "sarjapur_plots",
+          possession_time: "December 2026",
+          description: null,
+          confidence: 0.99
+        },
+      ],
+      skipped: [],
+    },
+  },
+  {
+    title: "Multiple Email Addresses",
+    learningObjective: "Select the first email address as primary and store secondary emails in crm_note.",
+    input: {
+      Name: "Jane Doe",
+      Emails: "jane@gmail.com, jane.work@gmail.com, jane@yahoo.com",
+    },
+    output: {
+      records: [
+        {
+          rowNumber: 2,
+          created_at: null,
+          name: "Jane Doe",
+          email: "jane@gmail.com",
+          country_code: null,
+          mobile_without_country_code: null,
+          company: null,
+          city: null,
+          state: null,
+          country: null,
+          lead_owner: null,
+          crm_status: null,
+          crm_note: "Additional emails: jane.work@gmail.com, jane@yahoo.com",
+          data_source: null,
+          possession_time: null,
+          description: null,
+          confidence: 0.99
+        },
+      ],
+      skipped: [],
+    },
+  },
+  {
+    title: "Multiple Phone Numbers",
+    learningObjective: "Extract primary phone, split dial code, and append extra contacts to comments.",
+    input: {
+      Name: "Chris Evans",
+      Phones: "+91 9876543210, +91 9988776655",
+    },
+    output: {
+      records: [
+        {
+          rowNumber: 2,
+          created_at: null,
+          name: "Chris Evans",
+          email: null,
+          country_code: "+91",
+          mobile_without_country_code: "9876543210",
+          company: null,
+          city: null,
+          state: null,
+          country: null,
+          lead_owner: null,
+          crm_status: null,
+          crm_note: "Additional phone: +91 9988776655",
+          data_source: null,
+          possession_time: null,
+          description: null,
+          confidence: 0.99
+        },
+      ],
+      skipped: [],
+    },
+  },
+  {
+    title: "Skip Invalid Record",
+    learningObjective: "Decline records that fail contact validation (missing email and phone).",
+    input: {
+      Name: "Unknown User",
+      Remarks: "Interested in buying.",
+    },
+    output: {
+      records: [],
+      skipped: [
+        {
+          rowNumber: 2,
+          reason: "Both email and mobile number are missing.",
+        },
+      ],
+    },
+  },
+  {
+    title: "Unusual Header Names",
+    learningObjective: "Perform semantic column parsing on unusual templates.",
+    input: {
+      "Customer Full Name": "Priya Singh",
+      "Reach Me At": "9988776655",
+      Observation: "Call after 5 PM",
+    },
+    output: {
+      records: [
+        {
+          rowNumber: 2,
+          created_at: null,
+          name: "Priya Singh",
+          email: null,
+          country_code: null,
+          mobile_without_country_code: "9988776655",
+          company: null,
+          city: null,
+          state: null,
+          country: null,
+          lead_owner: null,
+          crm_status: null,
+          crm_note: "Call after 5 PM",
+          data_source: null,
+          possession_time: null,
+          description: null,
+          confidence: 0.85
+        },
+      ],
+      skipped: [],
+    },
+  },
+  {
+    title: "Date Normalization",
+    learningObjective: "Normalize standard date formatting patterns for JavaScript parsability.",
+    input: {
+      Date: "12/05/2026",
+      Name: "David",
+      Email: "david@gmail.com",
+    },
+    output: {
+      records: [
+        {
+          rowNumber: 2,
+          created_at: "2026-05-12T00:00:00.000Z",
+          name: "David",
+          email: "david@gmail.com",
+          country_code: null,
+          mobile_without_country_code: null,
+          company: null,
+          city: null,
+          state: null,
+          country: null,
+          lead_owner: null,
+          crm_status: null,
+          crm_note: null,
+          data_source: null,
+          possession_time: null,
+          description: null,
+          confidence: 0.99
+        },
+      ],
+      skipped: [],
+    },
+  },
+  {
+    title: "Marketing Agency Spreadsheet",
+    learningObjective: "Perform CRM Status inference, map descriptive tags to description, and calculate confidence.",
+    input: {
+      Prospect: "Akash Gupta",
+      Company: "Acme Technologies",
+      Email: "akash@acme.com",
+      Notes: "Wants enterprise plan demo next Friday.",
+      "Ad Set": "Search Ads",
+      Budget: "15L",
+    },
+    output: {
+      records: [
+        {
+          rowNumber: 2,
+          created_at: null,
+          name: "Akash Gupta",
+          email: "akash@acme.com",
+          country_code: null,
+          mobile_without_country_code: null,
+          company: "Acme Technologies",
+          city: null,
+          state: null,
+          country: null,
+          lead_owner: null,
+          crm_status: "GOOD_LEAD_FOLLOW_UP",
+          crm_note: "Wants enterprise plan demo next Friday.",
+          data_source: null,
+          possession_time: null,
+          description: "Ad Set: Search Ads, Budget: 15L",
+          confidence: 0.85
+        },
+      ],
+      skipped: [],
+    },
+  },
+];

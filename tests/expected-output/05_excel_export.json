@@ -1,0 +1,10 @@
+{
+  "imported": 1,
+  "skipped": 0,
+  "records": [
+    {
+      "name": "Bob Martin",
+      "mobile_without_country_code": "9876543210"
+    }
+  ]
+}

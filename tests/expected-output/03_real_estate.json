@@ -1,0 +1,12 @@
+{
+  "imported": 1,
+  "skipped": 0,
+  "records": [
+    {
+      "name": "Rahul Sharma",
+      "mobile_without_country_code": "9988776655",
+      "country_code": "+91",
+      "data_source": "sarjapur_plots"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+"id","created_time","ad_id","ad_name","adset_id","adset_name","campaign_id","campaign_name","form_id","form_name","is_organic","platform","full_name","phone_number","email"
+"1","2026-06-15T10:30:00+0000","123","Summer Promo Video","456","Lookalike 1%","789","Summer Sale 2026","999","Lead Gen Form A","false","fb","John Doe","+15551234567","john.doe@example.com"
+"2","2026-06-15T11:45:00+0000","124","Summer Promo Carousel","457","Retargeting","789","Summer Sale 2026","999","Lead Gen Form A","false","ig","Jane Smith","+15559876543","jane.smith@example.com"

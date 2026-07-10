@@ -1,0 +1,11 @@
+{
+  "imported": 1,
+  "skipped": 0,
+  "records": [
+    {
+      "name": "Emma Watson",
+      "email": "emma@gmail.com",
+      "mobile_without_country_code": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "imported": 1,
+  "skipped": 0,
+  "records": [
+    {
+      "name": "John Doe",
+      "email": "john@gmail.com",
+      "mobile_without_country_code": "9876543210",
+      "country_code": "+91",
+      "data_source": "meridian_tower"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+/*
+ * Custom stylesheet for theme overrides or specialized components.
+ * Included for modular styling if required.
+ */
+.glow-effect {
+  box-shadow: 0 0 20px 2px rgba(16, 185, 129, 0.1);
+}
