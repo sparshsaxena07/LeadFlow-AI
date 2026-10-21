@@ -20,7 +20,7 @@ app.use(express.json());
 app.get("/health", (_req: Request, res: Response) => {
   res.status(200).json({
     success: true,
-    message: "GrowEasy Backend Running",
+    message: "LeadFlow AI Backend Running",
   });
 });
 

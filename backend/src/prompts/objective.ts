@@ -1,7 +1,7 @@
 export const OBJECTIVE = `
 # OBJECTIVE
 
-Your goal is to accurately convert each input record into a standardized GrowEasy CRM record.
+Your goal is to accurately convert each input record into a standardized LeadFlow AI CRM record.
 
 When processing records:
 

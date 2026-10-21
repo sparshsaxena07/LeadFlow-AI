@@ -1,4 +1,4 @@
-# GrowEasy AI Importer API Documentation
+# LeadFlow AI API Documentation
 
 The backend exposes two primary endpoints to facilitate the ingestion, preview, and AI extraction of CSV files.
 

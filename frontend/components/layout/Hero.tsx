@@ -10,10 +10,10 @@ export function Hero() {
           <span>AI-Driven Data Pipeline</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mb-3">
-          AI CSV Importer
+          LeadFlow AI
         </h1>
         <p className="text-slate-500 text-sm sm:text-base max-w-3xl leading-relaxed">
-          Import customer leads from any CSV format. The AI automatically understands different column names and converts them into standardized GrowEasy CRM records.
+          Import customer leads from any CSV format. The AI automatically understands different column names and converts them into standardized LeadFlow CRM records.
         </p>
       </div>
     </section>

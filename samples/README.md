@@ -1,6 +1,6 @@
-# GrowEasy AI Importer — Sample Datasets
+# LeadFlow AI — Sample Datasets
 
-This directory contains representative dummy datasets designed to demonstrate the versatility of the **GrowEasy AI CSV Importer** and its **Header Intelligence Engine**.
+This directory contains representative dummy datasets designed to demonstrate the versatility of the **LeadFlow AI** and its **Header Intelligence Engine**.
 
 ## Datasets Overview
 

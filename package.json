@@ -1,8 +1,8 @@
 {
-  "name": "groweasy-ai-importer",
+  "name": "leadflow-ai",
   "version": "1.0.0",
   "private": true,
-  "description": "GrowEasy AI CSV Importer Monorepo",
+  "description": "LeadFlow AI Monorepo",
   "workspaces": [
     "frontend",
     "backend"

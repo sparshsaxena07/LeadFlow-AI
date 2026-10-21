@@ -19,7 +19,7 @@ const TEST_CASES: Record<string, string> = {
 
 async function runTests() {
   console.log("====================================================");
-  console.log("       AI CSV Importer Ingestion Test Suite        ");
+  console.log("         LeadFlow AI Ingestion Test Suite           ");
   console.log("====================================================\n");
 
   const testDir = path.resolve(__dirname, "../../test-data");

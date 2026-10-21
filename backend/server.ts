@@ -5,7 +5,7 @@ import { logger } from "@/utils/logger";
 const PORT = env.PORT;
 
 const server = app.listen(PORT, () => {
-  logger.info(`GrowEasy CSV Importer backend running in ${env.NODE_ENV} mode on port ${PORT}`);
+  logger.info(`LeadFlow AI backend running in ${env.NODE_ENV} mode on port ${PORT}`);
 });
 
 // Graceful Shutdown Handler

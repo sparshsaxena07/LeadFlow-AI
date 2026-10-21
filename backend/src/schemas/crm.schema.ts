@@ -3,7 +3,7 @@ import { CRMStatus } from "../shared/enums/CRMStatus";
 import { DataSource } from "../shared/enums/DataSource";
 
 /**
- * Zod validation schema for GrowEasy CRM records.
+ * Zod validation schema for LeadFlow CRM records.
  * Checks email formatting, mobile expressions, date times, and enum values.
  */
 export const crmRecordSchema = z.object({

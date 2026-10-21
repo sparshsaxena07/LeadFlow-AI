@@ -4,7 +4,7 @@
 
 ## 1. Landing Page
 - **Filename**: `landing-page.png`
-- **Description**: The beautiful, animated glassmorphism hero section of the GrowEasy Importer.
+- **Description**: The beautiful, animated glassmorphism hero section of LeadFlow AI.
 
 ## 2. CSV Upload Component
 - **Filename**: `upload-card.png`

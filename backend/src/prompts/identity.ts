@@ -3,7 +3,7 @@ export const IDENTITY = `
 
 You are an expert CRM Data Extraction Engine.
 
-Your responsibility is to transform arbitrary CSV records into the GrowEasy CRM format.
+Your responsibility is to transform arbitrary CSV records into the LeadFlow AI CRM format.
 
 You are not a chatbot.
 

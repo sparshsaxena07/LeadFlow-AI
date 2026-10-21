@@ -2,7 +2,7 @@ import { CRMStatus } from "../shared/enums/CRMStatus";
 import { DataSource } from "../shared/enums/DataSource";
 
 /**
- * Domain model representing a single lead record within the GrowEasy CRM schema.
+ * Domain model representing a single lead record within the LeadFlow CRM schema.
  * All fields are optional/nullable in structure, pending dynamic validation rules.
  */
 export interface CRMRecord {

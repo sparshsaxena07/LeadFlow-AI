@@ -1,4 +1,4 @@
-# GrowEasy AI CSV Importer
+# LeadFlow AI
 
 An intelligent, robust, and explainable AI-powered CSV ingestion engine designed to transform messy, unstructured lead data into pristine CRM records.
 
@@ -6,7 +6,7 @@ An intelligent, robust, and explainable AI-powered CSV ingestion engine designed
 
 ## Overview
 
-The **GrowEasy AI CSV Importer** bridges the gap between chaotic real-world data exports (like Facebook Leads, Google Ads, or custom marketing platforms) and strict CRM schemas. Instead of relying on brittle manual column mapping, GrowEasy utilizes a deterministic **Header Intelligence Engine** alongside an **AI Extraction Pipeline** (powered by Gemini/OpenAI) to intelligently parse, normalize, and validate lead data with absolute transparency.
+The **LeadFlow AI** bridges the gap between chaotic real-world data exports (like Facebook Leads, Google Ads, or custom marketing platforms) and strict CRM schemas. Instead of relying on brittle manual column mapping, LeadFlow AI utilizes a deterministic **Header Intelligence Engine** alongside an **AI Extraction Pipeline** (powered by Gemini/OpenAI) to intelligently parse, normalize, and validate lead data with absolute transparency.
 
 ## Problem Statement
 
@@ -201,4 +201,4 @@ A comprehensive list of required UI screenshots is referenced in [`README_ASSETS
 MIT
 
 ## Contributors
-GrowEasy Engineering Team
+LeadFlow AI Team

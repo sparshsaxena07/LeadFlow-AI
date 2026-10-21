@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AI CSV Importer | GrowEasy CRM",
+  title: "LeadFlow AI | Intelligent CSV Importer",
   description: "Next-gen intelligent CRM lead upload, validation, and schema mapping tool.",
 };
 
@@ -27,10 +27,10 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center font-bold text-white shadow-sm">
-                G
+                L
               </div>
               <span className="font-semibold text-lg tracking-tight text-slate-900">
-                GrowEasy AI
+                LeadFlow AI
               </span>
             </div>
             <div className="flex items-center space-x-4">
@@ -47,7 +47,7 @@ export default function RootLayout({
 
         <footer className="border-t border-slate-200/80 bg-white py-6 text-center text-xs text-slate-550">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            &copy; {new Date().getFullYear()} GrowEasy AI. All rights reserved.
+            &copy; {new Date().getFullYear()} LeadFlow AI. All rights reserved.
           </div>
         </footer>
 
